@@ -91,9 +91,7 @@ $ brew install wine-crossover
 
 Run `make` to build the ROM. The ROM will be output as `build/heartgold.us/pokeheartgold.us.nds`
 
-To build Pokemon SoulSilver, run `make soulsilver`. You do not need to clean your working tree in between compiling. Pokemon SoulSilver will be built as `build/soulsilver.us/pokesoulsilver.us.nds`.
-
-There are targets for building and testing changes to individual components without repackaging the ROM. For the ARM9 modules, run `make main`. For the ARM7 module, run `make sub`. For the filesystem, run `make filesystem`. To build these for SoulSilver, append `GAME_VERSION=SOULSILVER` to the appropriate command.
+There are targets for building and testing changes to individual components without repackaging the ROM. For the ARM9 modules, run `make main`. For the ARM7 module, run `make sub`. For the filesystem, run `make filesystem`.
 
 At the end of building each of these, there is a checksum verification step. This makes sure that the final product is byte-for-byte equivalent to the retail ROM. To disable this, append `COMPARE=0` to your command.
 
@@ -108,7 +106,6 @@ If you find issues building the ROMs with the above methods, you can try the Doc
 ```console
 $ make clean
 $ ./contrib/docker/build_docker.sh # build pokeheartgold
-$ ./contrib/docker/build_docker.sh soulsilver # build pokesoulsilver
 ```
 
 Note: Docker may not run at a full performance if its underlying Linux kernel is being virtualized (mainly Windows and macOS hosts).

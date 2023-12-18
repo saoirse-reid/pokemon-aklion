@@ -1,5 +1,5 @@
 ############################################################
-### Linker spec file for Pokemon HeartGold/SoulSilver US ###
+###      Linker spec file for Pokemon HeartGold US       ###
 ###      Pass this to the SDK's makelcf.exe utility      ###
 ###           along with the ARM9-TS template.           ###
 ###                        WIP                           ###

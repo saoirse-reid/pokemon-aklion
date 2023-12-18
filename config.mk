@@ -8,14 +8,7 @@ shortname     := gold
 TITLE_NAME    := POKEMON HG
 GAME_CODE     := IPK
 else
-ifeq ($(GAME_VERSION),SOULSILVER)
-buildname     := soulsilver
-shortname     := silver
-TITLE_NAME    := POKEMON SS
-GAME_CODE     := IPG
-else
 $(error Unrecognized game version: $(GAME_VERSION))
-endif
 endif
 
 ifneq ($(GAME_REMASTER),0)
@@ -43,16 +36,13 @@ DEFINES = $(GF_DEFINES) $(GLB_DEFINES)
 ifeq ($(buildname),heartgold.us)
 SECURE_CRC := 0xA0FF
 endif
-ifeq ($(buildname),soulsilver.us)
-SECURE_CRC := 0x86A5
-endif
 
 ifndef SECURE_CRC
 $(error Unsupported ROM: $(GAME_VERSION) $(GAME_LANGUAGE))
 endif
 
 # At present this repository only supports the 1.0 US ROMs
-SUPPORTED_ROMS   := heartgold.us soulsilver.us
+SUPPORTED_ROMS   := heartgold.us
 ifneq ($(filter $(buildname),$(SUPPORTED_ROMS)),$(buildname))
 $(error $(buildname) is not supported, choose from: $(SUPPORTED_ROMS))
 endif

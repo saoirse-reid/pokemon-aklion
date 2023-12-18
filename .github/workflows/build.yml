@@ -59,13 +59,6 @@ jobs:
           GAME_REVISION: 0
         run: make -j${nproc}
 
-      - name: Build SoulSilver
-        env:
-          GAME_VERSION: SOULSILVER
-          GAME_LANGUAGE: ENGLISH
-          GAME_REVISION: 0
-        run: make -j${nproc}
-
       - name: Webhook
         if: ${{ github.event_name == 'push' }}
         run: |
@@ -98,7 +91,6 @@ jobs:
         run: |
           mkdir -p xmap
           cp build/heartgold.us/*.xMAP xmap/heartgoldus.xMAP
-          cp build/soulsilver.us/*.xMAP xmap/soulsilverus.xMAP
           echo "XMAP_COMMIT_MSG=$( git log --format=%s ${GITHUB_SHA} )" >> $GITHUB_ENV
 
       - name: Update xMAP

@@ -93,12 +93,9 @@ $(WORK_DIR)/include/global.h: $(FX_CONST_H) ;
 
 # Convenience targets
 heartgold:          ; @$(MAKE) GAME_VERSION=HEARTGOLD
-soulsilver:         ; @$(MAKE) GAME_VERSION=SOULSILVER
 compare_heartgold:  ; @$(MAKE) GAME_VERSION=HEARTGOLD  COMPARE=1
-compare_soulsilver: ; @$(MAKE) GAME_VERSION=SOULSILVER COMPARE=1
 clean_heartgold:    ; @$(MAKE) GAME_VERSION=HEARTGOLD clean
-clean_soulsilver:   ; @$(MAKE) GAME_VERSION=SOULSILVER clean
 
 compare:             compare_heartgold
 
-.PHONY: heartgold soulsilver compare compare_heartgold compare_soulsilver clean_heartgold clean_soulsilver
+.PHONY: heartgold compare compare_heartgold clean_heartgold
