@@ -546,13 +546,7 @@ static void GetHiddenPowerPowerType(Pokemon *mon, s32 *power, s32 *type) {
     int spatkIv = GetMonData(mon, MON_DATA_SPATK_IV, 0);
     int spdefIv = GetMonData(mon, MON_DATA_SPDEF_IV, 0);
     if (power) {
-        *power = ((hpIv & 2) >> 1) |
-                 (atkIv & 2) |
-                 ((defIv & 2) << 1) |
-                 ((spdIv & 2) << 2) |
-                 ((spatkIv & 2) << 3) |
-                 ((spdefIv & 2) << 4);
-        *power = ((*power)*40/63)+30;
+        *power = 60;
     }
     if (type) {
         *type = (hpIv & 1) |

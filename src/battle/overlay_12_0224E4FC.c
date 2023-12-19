@@ -6874,10 +6874,6 @@ static int GetDynamicMoveType(BattleSystem *bsys, BattleContext *ctx, int battle
                ((ctx->battleMons[battlerId].spDefIV & 1) << 5);
                
        type = (type * 15 / 63) + 1;
-       
-       if (type >= TYPE_MYSTERY) {
-           type++;
-       }
        break;
     case MOVE_WEATHER_BALL:
         if (!CheckAbilityActive(bsys, ctx, CHECK_ABILITY_ALL_HP, 0, ABILITY_CLOUD_NINE) && !CheckAbilityActive(bsys, ctx, CHECK_ABILITY_ALL_HP, 0, ABILITY_AIR_LOCK)) {
