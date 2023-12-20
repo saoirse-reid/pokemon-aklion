@@ -1360,7 +1360,7 @@
 	</row>
 	<row id="msg_0221_00334" index="334">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">Summons a snowstorm that lasts for\nfive turns. The snowstorm raises\nIce Type pokemon's DEF.</language>
+		<language name="English">Summons a snowstorm that lasts for\nfive turns. The snowstorm raises\nIce Type pokemon’s DEF.</language>
 	</row>
 	<row id="msg_0221_00335" index="335">
 		<attribute name="window_context_name">used</attribute>
