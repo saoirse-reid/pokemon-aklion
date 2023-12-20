@@ -543,7 +543,7 @@ static void GetHiddenPowerPowerType(Pokemon *mon, s32 *power, s32 *type) {
         *power = 60;
     }
     if (type) {
-        *type = GetMonData(mon, BMON_DATA_PERSONALITY, 0) % 18;
+        *type = GetMonData(mon, MON_DATA_PERSONALITY, 0) % 18;
     }
 }
 
