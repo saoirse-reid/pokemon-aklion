@@ -3618,14 +3618,7 @@ BOOL BtlCmd_HiddenPowerDamageCalc(BattleSystem *bsys, BattleContext *ctx) {
     BattleScriptIncrementPointer(ctx, 1);
 
     ctx->movePower = 60;
-    ctx->moveType =  (ctx->battleMons[ctx->battlerIdAttacker].hpIV & 1) |
-                     ((ctx->battleMons[ctx->battlerIdAttacker].atkIV & 1) << 1)|
-                     ((ctx->battleMons[ctx->battlerIdAttacker].defIV & 1) << 2) |
-                     ((ctx->battleMons[ctx->battlerIdAttacker].speedIV & 1) << 3) |
-                     ((ctx->battleMons[ctx->battlerIdAttacker].spAtkIV & 1) << 4) |
-                     ((ctx->battleMons[ctx->battlerIdAttacker].spDefIV & 1) << 5);
-
-    ctx->moveType = ctx->moveType * 15 / 63 + 1;
+    ctx->moveType = ctx->battleMons[ctx->battlerIdAttacker].personality % 18;
 
     return FALSE;
 }

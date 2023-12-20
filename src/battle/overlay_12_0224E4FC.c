@@ -6893,15 +6893,8 @@ static int GetDynamicMoveType(BattleSystem *bsys, BattleContext *ctx, int battle
         }
         break;
     case MOVE_HIDDEN_POWER:
-        type = (ctx->battleMons[battlerId].hpIV & 1) |
-               ((ctx->battleMons[battlerId].atkIV & 1) << 1)|
-               ((ctx->battleMons[battlerId].defIV & 1) << 2) |
-               ((ctx->battleMons[battlerId].speedIV & 1) << 3) |
-               ((ctx->battleMons[battlerId].spAtkIV & 1) << 4) |
-               ((ctx->battleMons[battlerId].spDefIV & 1) << 5);
-               
-       type = (type * 15 / 63) + 1;
-       break;
+        type = ctx->battleMons[battlerId].personality % 18;
+        break;
     case MOVE_WEATHER_BALL:
         if (!CheckAbilityActive(bsys, ctx, CHECK_ABILITY_ALL_HP, 0, ABILITY_CLOUD_NINE) && !CheckAbilityActive(bsys, ctx, CHECK_ABILITY_ALL_HP, 0, ABILITY_AIR_LOCK)) {
             if (ctx->fieldCondition & FIELD_CONDITION_WEATHER) {

@@ -539,27 +539,11 @@ BOOL ScrCmd_GetHiddenPowerType(ScriptContext *ctx) {
 }
 
 static void GetHiddenPowerPowerType(Pokemon *mon, s32 *power, s32 *type) {
-    int hpIv = GetMonData(mon, MON_DATA_HP_IV, 0);
-    int atkIv = GetMonData(mon, MON_DATA_ATK_IV, 0);
-    int defIv = GetMonData(mon, MON_DATA_DEF_IV, 0);
-    int spdIv = GetMonData(mon, MON_DATA_SPEED_IV, 0);
-    int spatkIv = GetMonData(mon, MON_DATA_SPATK_IV, 0);
-    int spdefIv = GetMonData(mon, MON_DATA_SPDEF_IV, 0);
     if (power) {
         *power = 60;
     }
     if (type) {
-        *type = (hpIv & 1) |
-                 ((atkIv & 1) << 1) |
-                 ((defIv & 1) << 2) |
-                 ((spdIv & 1) << 3) |
-                 ((spatkIv & 1) << 4) |
-                 ((spdefIv & 1) << 5);
-        *type = ((*type)*15/63)+1;
-
-        if (*type >= 9) {
-            (*type)++;
-        }
+        *type = GetMonData(mon, BMON_DATA_PERSONALITY, 0) % 18;
     }
 }
 
