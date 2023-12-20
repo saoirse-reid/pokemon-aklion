@@ -1152,7 +1152,7 @@
 	</row>
 	<row id="msg_0221_00282" index="282">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">A Pokémon held item that extends the\nduration of the move Hail used by the\nholder.</language>
+		<language name="English">A Pokémon held item that extends the\nduration of the move Snowstorm used\nby the holder.</language>
 	</row>
 	<row id="msg_0221_00283" index="283">
 		<attribute name="window_context_name">used</attribute>
@@ -1360,7 +1360,7 @@
 	</row>
 	<row id="msg_0221_00334" index="334">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">Summons a hailstorm that lasts for\nfive turns. The hailstorm damages\nall types except Ice.</language>
+		<language name="English">Summons a snowstorm that lasts for\nfive turns. The snowstorm raises\nIce Type pokemon's DEF.</language>
 	</row>
 	<row id="msg_0221_00335" index="335">
 		<attribute name="window_context_name">used</attribute>

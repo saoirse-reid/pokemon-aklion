@@ -1032,9 +1032,9 @@
 		<attribute name="window_context_name">used</attribute>
 		<language name="English">HEAT WAVE</language>
 	</row>
-	<row id="msg_0751_hail" index="258">
+	<row id="msg_0751_snow" index="258">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">HAIL</language>
+		<language name="English">SNOWSTORM</language>
 	</row>
 	<row id="msg_0751_torment" index="259">
 		<attribute name="window_context_name">used</attribute>

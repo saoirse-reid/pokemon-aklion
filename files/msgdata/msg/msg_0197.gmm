@@ -2807,15 +2807,15 @@
 	</row>
 	<row id="msg_0197_00701" index="701">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">{STRVAR_1 1, 0, 0}’s {STRVAR_1 5, 1, 0}\nwhipped up a hailstorm!</language>
+		<language name="English">{STRVAR_1 1, 0, 0}’s {STRVAR_1 5, 1, 0}\nwhipped up a snowstorm!</language>
 	</row>
 	<row id="msg_0197_00702" index="702">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">The wild {STRVAR_1 1, 0, 0}’s\n{STRVAR_1 5, 1, 0} whipped up\fa hailstorm!</language>
+		<language name="English">The wild {STRVAR_1 1, 0, 0}’s\n{STRVAR_1 5, 1, 0} whipped up\fa snowstorm!</language>
 	</row>
 	<row id="msg_0197_00703" index="703">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">The foe’s {STRVAR_1 1, 0, 0}’s\n{STRVAR_1 5, 1, 0} whipped up\fa hailstorm!</language>
+		<language name="English">The foe’s {STRVAR_1 1, 0, 0}’s\n{STRVAR_1 5, 1, 0} whipped up\fa snowstorm!</language>
 	</row>
 	<row id="msg_0197_00704" index="704">
 		<attribute name="window_context_name">used</attribute>
@@ -3244,15 +3244,15 @@
 	</row>
 	<row id="msg_0197_00810" index="810">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">It started to hail!</language>
+		<language name="English">Snow has started to fall!</language>
 	</row>
 	<row id="msg_0197_00811" index="811">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">Hail continues to fall.</language>
+		<language name="English">Snow continues to fall.</language>
 	</row>
 	<row id="msg_0197_00812" index="812">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">The hail stopped.</language>
+		<language name="English">The snow stopped.</language>
 	</row>
 	<row id="msg_0197_00813" index="813">
 		<attribute name="window_context_name">used</attribute>

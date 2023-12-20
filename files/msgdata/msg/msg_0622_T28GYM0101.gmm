@@ -18,7 +18,7 @@
 	</row>
 	<row id="msg_0622_T28GYM0101_00004" index="4">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">Pryce: That TM contains Hail.\rIt summons a hailstorm that lasts for\nfive turns. The hailstorm damages\fall types except Ice.</language>
+		<language name="English">Pryce: That TM contains Snowstorm.\rIt summons a snowstorm that lasts for\nfive turns. The snowstorm raises\nIce Type pokemon's DEF.</language>
 	</row>
 	<row id="msg_0622_T28GYM0101_00005" index="5">
 		<attribute name="window_context_name">used</attribute>

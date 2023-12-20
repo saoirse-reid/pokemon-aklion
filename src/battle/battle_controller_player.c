@@ -681,7 +681,7 @@ typedef enum UpdateFieldConditionState {
     UFC_STATE_RAIN,
     UFC_STATE_SANDSTORM,
     UFC_STATE_SUN,
-    UFC_STATE_HAIL,
+    UFC_STATE_SNOWSTORM,
     UFC_STATE_FOG,
     UFC_STATE_GRAVITY,
     UFC_STATE_END
@@ -945,10 +945,10 @@ void BattleControllerPlayer_UpdateFieldCondition(BattleSystem *bsys, BattleConte
             }
             ctx->stateFieldConditionUpdate++;
             break;
-        case UFC_STATE_HAIL:
-            if (ctx->fieldCondition & FIELD_CONDITION_HAIL_ALL) {
-                if (ctx->fieldCondition & FIELD_CONDITION_HAIL_PERMANENT) {
-                    ctx->buffMsg.id = msg_0197_00811; //Hail continues to fall.
+        case UFC_STATE_SNOWSTORM:
+            if (ctx->fieldCondition & FIELD_CONDITION_SNOWSTORM_ALL) {
+                if (ctx->fieldCondition & FIELD_CONDITION_SNOWSTORM_PERMANENT) {
+                    ctx->buffMsg.id = msg_0197_00811; //Snow continues to fall.
                     ctx->buffMsg.tag = 0;
                     ReadBattleScriptFromNarc(ctx, NARC_a_0_0_1, 104);
                     ctx->commandNext = ctx->command;
@@ -958,7 +958,7 @@ void BattleControllerPlayer_UpdateFieldCondition(BattleSystem *bsys, BattleConte
                     ctx->commandNext = ctx->command;
                     ctx->command = CONTROLLER_COMMAND_RUN_SCRIPT;
                 } else {
-                    ctx->buffMsg.id = msg_0197_00811; //Hail continues to fall.
+                    ctx->buffMsg.id = msg_0197_00811; //Snow continues to fall.
                     ctx->buffMsg.tag = 0;
                     ReadBattleScriptFromNarc(ctx, NARC_a_0_0_1, 104);
                     ctx->commandNext = ctx->command;

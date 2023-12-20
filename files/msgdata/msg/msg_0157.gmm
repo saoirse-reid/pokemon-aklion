@@ -190,7 +190,7 @@
 	</row>
 	<row id="msg_0157_00047" index="47">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">Weather: Hail</language>
+		<language name="English">Weather: Snowstorm</language>
 	</row>
 	<row id="msg_0157_00048" index="48">
 		<attribute name="window_context_name">used</attribute>

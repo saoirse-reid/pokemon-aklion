@@ -1034,7 +1034,7 @@
 	</row>
 	<row id="msg_0749_00258" index="258">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">The user summons a\nhailstorm lasting five\nturns. It damages all\nPokémon except the\nIce type.</language>
+		<language name="English">The user summons a\nsnowstorm lasting five\nturns. It raises the\nDEF of all Ice Type\npokemon.</language>
 	</row>
 	<row id="msg_0749_00259" index="259">
 		<attribute name="window_context_name">used</attribute>

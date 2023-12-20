@@ -3309,7 +3309,7 @@ int TryAbilityOnEntry(BattleSystem *bsys, BattleContext *ctx) {
                         break;
                     case ABILITY_SNOW_WARNING:
                         ctx->battleMons[battlerId].sendOutFlag = TRUE;
-                        if (!(ctx->fieldCondition & FIELD_CONDITION_HAIL_PERMANENT)) {
+                        if (!(ctx->fieldCondition & FIELD_CONDITION_SNOWSTORM_PERMANENT)) {
                             script = 252;
                             flag = TRUE;
                         }
@@ -5475,7 +5475,7 @@ BOOL Battler_CheckWeatherFormChange(BattleSystem *bsys, BattleContext *ctx, int 
                         *script = 262;
                         ret = TRUE;
                         break;
-                } else if ((ctx->fieldCondition & FIELD_CONDITION_HAIL_ALL) &&
+                } else if ((ctx->fieldCondition & FIELD_CONDITION_SNOWSTORM_ALL) &&
                                 ctx->battleMons[ctx->battlerIdTemp].type1 != TYPE_ICE &&
                                 ctx->battleMons[ctx->battlerIdTemp].type2 != TYPE_ICE) {
                         ctx->battleMons[ctx->battlerIdTemp].type1 = TYPE_ICE;
@@ -5512,7 +5512,7 @@ BOOL Battler_CheckWeatherFormChange(BattleSystem *bsys, BattleContext *ctx, int 
                     *script = 262;
                     ret = TRUE;
                     break;
-                } else if ((ctx->fieldCondition & FIELD_CONDITION_HAIL_ALL) && ctx->battleMons[ctx->battlerIdTemp].form == (u8) CHERRIM_SUNNY) {
+                } else if ((ctx->fieldCondition & FIELD_CONDITION_SNOWSTORM_ALL) && ctx->battleMons[ctx->battlerIdTemp].form == (u8) CHERRIM_SUNNY) {
                     ctx->battleMons[ctx->battlerIdTemp].form = (u8) CHERRIM_CLOUDY;
                     *script = 262;
                     ret = TRUE;
@@ -5993,6 +5993,9 @@ int CalcMoveDamage(BattleSystem *bsys, BattleContext *ctx, u32 moveNo, u32 sideC
         }
         if ((fieldCondition & FIELD_CONDITION_SANDSTORM_ALL) && (calcTarget.type1 == TYPE_ROCK || calcTarget.type2 == TYPE_ROCK)) {
             monSpDef = monSpDef * 15 / 10;
+        }
+        if ((fieldCondition & FIELD_CONDITION_SNOWSTORM_ALL) && (calcTarget.type1 == TYPE_ICE || calcTarget.type2 == TYPE_ICE)) {
+            monDef = monDef * 15 / 10;
         }
         if ((fieldCondition & FIELD_CONDITION_SUN_ALL) && CheckAbilityActive(bsys, ctx, CHECK_ABILITY_SAME_SIDE_HP, battlerIdAttacker, ABILITY_FLOWER_GIFT)) {
             monAtk = monAtk * 15 / 10;
@@ -6907,7 +6910,7 @@ static int GetDynamicMoveType(BattleSystem *bsys, BattleContext *ctx, int battle
                 if (ctx->fieldCondition & FIELD_CONDITION_SUN_ALL) {
                     type = TYPE_FIRE;
                 }
-                if (ctx->fieldCondition & FIELD_CONDITION_HAIL_ALL) {
+                if (ctx->fieldCondition & FIELD_CONDITION_SNOWSTORM_ALL) {
                     type = TYPE_ICE;
                 }
                 //BUG: If the weather is foggy, then type doesn't get set properly before being returned

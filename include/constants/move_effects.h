@@ -164,7 +164,7 @@
 #define MOVE_EFFECT_SPIT_UP                            161
 #define MOVE_EFFECT_SWALLOW                            162
 #define MOVE_EFFECT_UNUSED_163                         163
-#define MOVE_EFFECT_WEATHER_HAIL                       164
+#define MOVE_EFFECT_WEATHER_SNOWSTORM                  164
 #define MOVE_EFFECT_TORMENT                            165
 #define MOVE_EFFECT_SP_ATK_UP_CAUSE_CONFUSION          166
 #define MOVE_EFFECT_STATUS_BURN                        167

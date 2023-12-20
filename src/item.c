@@ -32,7 +32,7 @@ static const u16 sTMHMMoves[] = {
     MOVE_CALM_MIND,                    // TM04
     MOVE_ROAR,                         // TM05
     MOVE_TOXIC,                        // TM06
-    MOVE_HAIL,                         // TM07
+    MOVE_SNOWSTORM,                         // TM07
     MOVE_BULK_UP,                      // TM08
     MOVE_BULLET_SEED,                  // TM09
     MOVE_HIDDEN_POWER,                 // TM10

@@ -1422,7 +1422,7 @@
           "item": "ITEM_NONE",
           "moves": [
             "MOVE_SNORE",
-            "MOVE_HAIL",
+            "MOVE_SNOWSTORM",
             "MOVE_ICY_WIND",
             "MOVE_REST"
           ],
@@ -1451,7 +1451,7 @@
           "species": "SPECIES_PILOSWINE",
           "item": "ITEM_SITRUS_BERRY",
           "moves": [
-            "MOVE_HAIL",
+            "MOVE_SNOWSTORM",
             "MOVE_ICE_FANG",
             "MOVE_MUD_BOMB",
             "MOVE_BLIZZARD"
@@ -32620,7 +32620,7 @@
           "species": "SPECIES_WALREIN",
           "item": "ITEM_NONE",
           "moves": [
-            "MOVE_HAIL",
+            "MOVE_SNOWSTORM",
             "MOVE_BODY_SLAM",
             "MOVE_SWAGGER",
             "MOVE_BLIZZARD"

@@ -507,7 +507,7 @@
 	</row>
 	<row id="msg_0766_00126" index="126">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">Hail</language>
+		<language name="English">Snow</language>
 	</row>
 	<row id="msg_0766_00127" index="127">
 		<attribute name="window_context_name">used</attribute>
@@ -991,7 +991,7 @@
 	</row>
 	<row id="msg_0766_00247" index="247">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">{STRVAR_1 3, 0, 0}:\nIt’s hailing here.\r</language>
+		<language name="English">{STRVAR_1 3, 0, 0}:\nIt’s snowing here.\r</language>
 	</row>
 	<row id="msg_0766_00248" index="248">
 		<attribute name="window_context_name">used</attribute>
@@ -1475,7 +1475,7 @@
 	</row>
 	<row id="msg_0766_00368" index="368">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">{STRVAR_1 3, 0, 0}:\nOh, it’s hailing over there!\r</language>
+		<language name="English">{STRVAR_1 3, 0, 0}:\nOh, it’s snowing over there!\r</language>
 	</row>
 	<row id="msg_0766_00369" index="369">
 		<attribute name="window_context_name">used</attribute>
@@ -2379,7 +2379,7 @@
 	</row>
 	<row id="msg_0766_00594" index="594">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">{COLOR 2}{STRVAR_1 3, 0, 0}{COLOR 0}:\nIt’s hailing here.\r</language>
+		<language name="English">{COLOR 2}{STRVAR_1 3, 0, 0}{COLOR 0}:\nIt’s snowing here.\r</language>
 	</row>
 	<row id="msg_0766_00595" index="595">
 		<attribute name="window_context_name">used</attribute>
@@ -2543,7 +2543,7 @@
 	</row>
 	<row id="msg_0766_00635" index="635">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">{COLOR 2}{STRVAR_1 3, 0, 0}{COLOR 0}:\nOh, it’s hailing over there!\r</language>
+		<language name="English">{COLOR 2}{STRVAR_1 3, 0, 0}{COLOR 0}:\nOh, it’s snowing over there!\r</language>
 	</row>
 	<row id="msg_0766_00636" index="636">
 		<attribute name="window_context_name">used</attribute>

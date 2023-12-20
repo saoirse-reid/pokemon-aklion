@@ -3098,15 +3098,15 @@
 	</row>
 	<row id="msg_0003_EVERYWHERE_00774" index="774">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">{STRVAR_1 1, 0, 0} used\nHail!</language>
+		<language name="English">{STRVAR_1 1, 0, 0} used\nSnowstorm!</language>
 	</row>
 	<row id="msg_0003_EVERYWHERE_00775" index="775">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">The wild {STRVAR_1 1, 0, 0} used\nHail!</language>
+		<language name="English">The wild {STRVAR_1 1, 0, 0} used\nSnowstorm!</language>
 	</row>
 	<row id="msg_0003_EVERYWHERE_00776" index="776">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">The foe’s {STRVAR_1 1, 0, 0} used\nHail!</language>
+		<language name="English">The foe’s {STRVAR_1 1, 0, 0} used\nSnowstorm!</language>
 	</row>
 	<row id="msg_0003_EVERYWHERE_00777" index="777">
 		<attribute name="window_context_name">used</attribute>

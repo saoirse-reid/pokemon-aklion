@@ -3348,7 +3348,7 @@ BOOL BtlCmd_WeatherDamageCalc(BattleSystem *bsys, BattleContext *ctx) {
                 }
             }
         }
-        if (ctx->fieldCondition & FIELD_CONDITION_HAIL_ALL) {
+        if (ctx->fieldCondition & FIELD_CONDITION_SNOWSTORM_ALL) {
             if (ctx->battleMons[battlerId].hp && !(ctx->battleMons[battlerId].moveEffectFlags & 0x40080)) {
                 if (GetBattlerAbility(ctx, battlerId) == ABILITY_ICE_BODY) {
                     if (ctx->battleMons[battlerId].hp < ctx->battleMons[battlerId].maxHp) {
@@ -3356,7 +3356,7 @@ BOOL BtlCmd_WeatherDamageCalc(BattleSystem *bsys, BattleContext *ctx) {
                     }
                 } else if (type1 != TYPE_ICE && type2 != TYPE_ICE &&
                            GetBattlerAbility(ctx, battlerId) != ABILITY_SNOW_CLOAK) {
-                    ctx->moveTemp = MOVE_HAIL;
+                    ctx->moveTemp = MOVE_SNOWSTORM;
                     ctx->hpCalc = DamageDivide(ctx->battleMons[battlerId].maxHp * -1, 16);
 
                 }
@@ -4139,7 +4139,7 @@ BOOL BtlCmd_WeatherBallDamageCalc(BattleSystem *bsys, BattleContext *ctx) {
             if (ctx->fieldCondition & FIELD_CONDITION_SUN_ALL) {
                 ctx->moveType = TYPE_FIRE;
             }
-            if (ctx->fieldCondition & FIELD_CONDITION_HAIL_ALL) {
+            if (ctx->fieldCondition & FIELD_CONDITION_SNOWSTORM_ALL) {
                 ctx->moveType = TYPE_ICE;
             }
         } else {

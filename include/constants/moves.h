@@ -259,7 +259,7 @@
 #define MOVE_SPIT_UP        255
 #define MOVE_SWALLOW        256
 #define MOVE_HEAT_WAVE      257
-#define MOVE_HAIL           258
+#define MOVE_SNOWSTORM           258
 #define MOVE_TORMENT        259
 #define MOVE_FLATTER        260
 #define MOVE_WILL_O_WISP    261

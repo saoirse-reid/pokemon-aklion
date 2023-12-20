@@ -326,7 +326,7 @@
 	</row>
 	<row id="msg_0722_00081" index="81">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">Raises evasion in a\nhailstorm.</language>
+		<language name="English">Raises evasion in a\nsnowstorm.</language>
 	</row>
 	<row id="msg_0722_00082" index="82">
 		<attribute name="window_context_name">used</attribute>
@@ -462,7 +462,7 @@
 	</row>
 	<row id="msg_0722_00115" index="115">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">The Pokémon regains HP in\na hailstorm.</language>
+		<language name="English">The Pokémon regains HP in\na snowstorm.</language>
 	</row>
 	<row id="msg_0722_00116" index="116">
 		<attribute name="window_context_name">used</attribute>
@@ -470,7 +470,7 @@
 	</row>
 	<row id="msg_0722_00117" index="117">
 		<attribute name="window_context_name">used</attribute>
-		<language name="English">The Pokémon summons a\nhailstorm in battle.</language>
+		<language name="English">The Pokémon summons a\nsnowstorm in battle.</language>
 	</row>
 	<row id="msg_0722_00118" index="118">
 		<attribute name="window_context_name">used</attribute>
