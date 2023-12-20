@@ -54,7 +54,6 @@ static MetCondition MonMetCondition(Pokemon *mon, BOOL isMine);
 static void FormatNature(Unk0208E600 *a0);
 static void FormatDateAndLocationMet(Unk0208E600 *a0, int msgNo);
 static void FormatDateAndLocation_Migrated(Unk0208E600 *a0, int msgNo);
-static void FormatCharacteristic(Unk0208E600 *a0);
 static void FormatFlavorPreference(Unk0208E600 *a0);
 static void FormatDateAndLocation_Egg(Unk0208E600 *a0, int msgNo, BOOL hatched);
 static void FormatEggWatch(Unk0208E600 *a0);
@@ -75,8 +74,6 @@ Unk0208E600 *sub_0208E600(Pokemon *mon, BOOL isMine, HeapID heapId, int a3) {
     ptr->notepad.nature = NULL;
     ptr->notepad.dateLocationMetLine = 0;
     ptr->notepad.dateLocationMet = NULL;
-    ptr->notepad.characteristicLine = 0;
-    ptr->notepad.characteristic = NULL;
     ptr->notepad.flavorPreferenceLine = 0;
     ptr->notepad.flavorPreference = NULL;
     ptr->notepad.eggWatchLine = 0;
@@ -89,9 +86,7 @@ Unk0208E600 *sub_0208E600(Pokemon *mon, BOOL isMine, HeapID heapId, int a3) {
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00049);
-        ptr->notepad.characteristicLine = 6;
-        FormatCharacteristic(ptr);
-        ptr->notepad.flavorPreferenceLine = 7;
+        ptr->notepad.flavorPreferenceLine = 6;
         FormatFlavorPreference(ptr);
         break;
     case MET_CONDITION_WILD_ENCOUNTER_TRADED:
@@ -99,9 +94,7 @@ Unk0208E600 *sub_0208E600(Pokemon *mon, BOOL isMine, HeapID heapId, int a3) {
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00050);
-        ptr->notepad.characteristicLine = 6;
-        FormatCharacteristic(ptr);
-        ptr->notepad.flavorPreferenceLine = 7;
+        ptr->notepad.flavorPreferenceLine = 6;
         FormatFlavorPreference(ptr);
         break;
     case MET_CONDITION_WILD_GIFT:
@@ -109,9 +102,7 @@ Unk0208E600 *sub_0208E600(Pokemon *mon, BOOL isMine, HeapID heapId, int a3) {
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00051);
-        ptr->notepad.characteristicLine = 6;
-        FormatCharacteristic(ptr);
-        ptr->notepad.flavorPreferenceLine = 7;
+        ptr->notepad.flavorPreferenceLine = 6;
         FormatFlavorPreference(ptr);
         break;
     case MET_CONDITION_EGG_HATCHED:
@@ -119,9 +110,7 @@ Unk0208E600 *sub_0208E600(Pokemon *mon, BOOL isMine, HeapID heapId, int a3) {
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00052);
-        ptr->notepad.characteristicLine = 8;
-        FormatCharacteristic(ptr);
-        ptr->notepad.flavorPreferenceLine = 9;
+        ptr->notepad.flavorPreferenceLine = 8;
         FormatFlavorPreference(ptr);
         break;
     case MET_CONDITION_EGG_HATCHED_TRADED:
@@ -129,9 +118,7 @@ Unk0208E600 *sub_0208E600(Pokemon *mon, BOOL isMine, HeapID heapId, int a3) {
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00053);
-        ptr->notepad.characteristicLine = 8;
-        FormatCharacteristic(ptr);
-        ptr->notepad.flavorPreferenceLine = 9;
+        ptr->notepad.flavorPreferenceLine = 8;
         FormatFlavorPreference(ptr);
         break;
     case MET_CONDITION_EGG_HATCHED_GIFT:
@@ -139,9 +126,7 @@ Unk0208E600 *sub_0208E600(Pokemon *mon, BOOL isMine, HeapID heapId, int a3) {
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00054);
-        ptr->notepad.characteristicLine = 8;
-        FormatCharacteristic(ptr);
-        ptr->notepad.flavorPreferenceLine = 9;
+        ptr->notepad.flavorPreferenceLine = 8;
         FormatFlavorPreference(ptr);
         break;
     case MET_CONDITION_EGG_HATCHED_GIFT_TRADED:
@@ -149,9 +134,7 @@ Unk0208E600 *sub_0208E600(Pokemon *mon, BOOL isMine, HeapID heapId, int a3) {
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00055);
-        ptr->notepad.characteristicLine = 8;
-        FormatCharacteristic(ptr);
-        ptr->notepad.flavorPreferenceLine = 9;
+        ptr->notepad.flavorPreferenceLine = 8;
         FormatFlavorPreference(ptr);
         break;
     case MET_CONDITION_FATEFUL_ENCOUNTER:
@@ -159,9 +142,7 @@ Unk0208E600 *sub_0208E600(Pokemon *mon, BOOL isMine, HeapID heapId, int a3) {
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00056);
-        ptr->notepad.characteristicLine = 7;
-        FormatCharacteristic(ptr);
-        ptr->notepad.flavorPreferenceLine = 8;
+        ptr->notepad.flavorPreferenceLine = 7;
         FormatFlavorPreference(ptr);
         break;
     case MET_CONDITION_FATEFUL_ENCOUNTER_TRADED:
@@ -169,9 +150,7 @@ Unk0208E600 *sub_0208E600(Pokemon *mon, BOOL isMine, HeapID heapId, int a3) {
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00057);
-        ptr->notepad.characteristicLine = 7;
-        FormatCharacteristic(ptr);
-        ptr->notepad.flavorPreferenceLine = 8;
+        ptr->notepad.flavorPreferenceLine = 7;
         FormatFlavorPreference(ptr);
         break;
     case MET_CONDITION_FATEFUL_EGG_HATCHED:
@@ -179,57 +158,43 @@ Unk0208E600 *sub_0208E600(Pokemon *mon, BOOL isMine, HeapID heapId, int a3) {
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00058);
-        ptr->notepad.characteristicLine = 9;
-        FormatCharacteristic(ptr);
         break;
     case MET_CONDITION_FATEFUL_EGG_HATCHED_TRADED:
         ptr->notepad.natureLine = 1;
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00059);
-        ptr->notepad.characteristicLine = 9;
-        FormatCharacteristic(ptr);
         break;
     case MET_CONDITION_FATEFUL_EGG_HATCHED_ARRIVED:
         ptr->notepad.natureLine = 1;
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00060);
-        ptr->notepad.characteristicLine = 9;
-        FormatCharacteristic(ptr);
         break;
     case MET_CONDITION_FATEFUL_EGG_HATCHED_ARRIVED_TRADED:
         ptr->notepad.natureLine = 1;
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00061);
-        ptr->notepad.characteristicLine = 9;
-        FormatCharacteristic(ptr);
         break;
     case MET_CONDITION_FATEFUL_EGG_HATCHED_GIFT:
         ptr->notepad.natureLine = 1;
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00062);
-        ptr->notepad.characteristicLine = 9;
-        FormatCharacteristic(ptr);
         break;
     case MET_CONDITION_FATEFUL_EGG_HATCHED_GIFT_TRADED:
         ptr->notepad.natureLine = 1;
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocationMet(ptr, msg_0302_00063);
-        ptr->notepad.characteristicLine = 9;
-        FormatCharacteristic(ptr);
         break;
     case MET_CONDITION_MIGRATED:
         ptr->notepad.natureLine = 1;
         FormatNature(ptr);
         ptr->notepad.dateLocationMetLine = 2;
         FormatDateAndLocation_Migrated(ptr, msg_0302_00064);
-        ptr->notepad.characteristicLine = 6;
-        FormatCharacteristic(ptr);
-        ptr->notepad.flavorPreferenceLine = 7;
+        ptr->notepad.flavorPreferenceLine = 6;
         FormatFlavorPreference(ptr);
         break;
     case MET_CONDITION_EGG:
@@ -272,9 +237,6 @@ void sub_0208E994(Unk0208E600 *a0) {
     }
     if (a0->notepad.dateLocationMet) {
         FreeToHeap(a0->notepad.dateLocationMet);
-    }
-    if (a0->notepad.characteristic) {
-        FreeToHeap(a0->notepad.characteristic);
     }
     if (a0->notepad.flavorPreference) {
         FreeToHeap(a0->notepad.flavorPreference);
@@ -417,170 +379,6 @@ static void FormatDateAndLocation_Egg(Unk0208E600 *a0, int msgNo, BOOL hatched) 
 
     StringExpandPlaceholders(a0->msgFmt, a0->notepad.dateLocationMet, str);
     String_Delete(str);
-}
-
-static void FormatCharacteristic(Unk0208E600 *a0) {
-    int index;
-    int maxIv;
-
-    a0->notepad.characteristic = String_New(0x48, a0->heapId);
-
-    int hpIv = GetMonData(a0->mon, MON_DATA_HP_IV, NULL);
-    int atkIv = GetMonData(a0->mon, MON_DATA_ATK_IV, NULL);
-    int defIv = GetMonData(a0->mon, MON_DATA_DEF_IV, NULL);
-    int speedIv = GetMonData(a0->mon, MON_DATA_SPEED_IV, NULL);
-    int spAtkIv = GetMonData(a0->mon, MON_DATA_SPATK_IV, NULL);
-    int spDefIv = GetMonData(a0->mon, MON_DATA_SPDEF_IV, NULL);
-    u32 personality = GetMonData(a0->mon, MON_DATA_PERSONALITY, NULL);
-
-    switch (personality % 6) {
-    case 0:
-    default:
-        index = 0;
-        maxIv = hpIv;
-        if (maxIv < atkIv) {
-            index = 1;
-            maxIv = atkIv;
-        }
-        if (maxIv < defIv) {
-            index = 2;
-            maxIv = defIv;
-        }
-        if (maxIv < speedIv) {
-            index = 3;
-            maxIv = speedIv;
-        }
-        if (maxIv < spAtkIv) {
-            index = 4;
-            maxIv = spAtkIv;
-        }
-        if (maxIv < spDefIv) {
-            index = 5;
-            maxIv = spDefIv;
-        }
-        break;
-    case 1:
-        index = 1;
-        maxIv = atkIv;
-        if (maxIv < defIv) {
-            index = 2;
-            maxIv = defIv;
-        }
-        if (maxIv < speedIv) {
-            index = 3;
-            maxIv = speedIv;
-        }
-        if (maxIv < spAtkIv) {
-            index = 4;
-            maxIv = spAtkIv;
-        }
-        if (maxIv < spDefIv) {
-            index = 5;
-            maxIv = spDefIv;
-        }
-        if (maxIv < hpIv) {
-            index = 0;
-            maxIv = hpIv;
-        }
-        break;
-    case 2:
-        index = 2;
-        maxIv = defIv;
-        if (maxIv < speedIv) {
-            index = 3;
-            maxIv = speedIv;
-        }
-        if (maxIv < spAtkIv) {
-            index = 4;
-            maxIv = spAtkIv;
-        }
-        if (maxIv < spDefIv) {
-            index = 5;
-            maxIv = spDefIv;
-        }
-        if (maxIv < hpIv) {
-            index = 0;
-            maxIv = hpIv;
-        }
-        if (maxIv < atkIv) {
-            index = 1;
-            maxIv = atkIv;
-        }
-        break;
-    case 3:
-        index = 3;
-        maxIv = speedIv;
-        if (maxIv < spAtkIv) {
-            index = 4;
-            maxIv = spAtkIv;
-        }
-        if (maxIv < spDefIv) {
-            index = 5;
-            maxIv = spDefIv;
-        }
-        if (maxIv < hpIv) {
-            index = 0;
-            maxIv = hpIv;
-        }
-        if (maxIv < atkIv) {
-            index = 1;
-            maxIv = atkIv;
-        }
-        if (maxIv < defIv) {
-            index = 2;
-            maxIv = defIv;
-        }
-        break;
-    case 4:
-        index = 4;
-        maxIv = spAtkIv;
-        if (maxIv < spDefIv) {
-            index = 5;
-            maxIv = spDefIv;
-        }
-        if (maxIv < hpIv) {
-            index = 0;
-            maxIv = hpIv;
-        }
-        if (maxIv < atkIv) {
-            index = 1;
-            maxIv = atkIv;
-        }
-        if (maxIv < defIv) {
-            index = 2;
-            maxIv = defIv;
-        }
-        if (maxIv < speedIv) {
-            index = 3;
-            maxIv = speedIv;
-        }
-        break;
-    case 5:
-        index = 5;
-        maxIv = spDefIv;
-        if (maxIv < hpIv) {
-            index = 0;
-            maxIv = hpIv;
-        }
-        if (maxIv < atkIv) {
-            index = 1;
-            maxIv = atkIv;
-        }
-        if (maxIv < defIv) {
-            index = 2;
-            maxIv = defIv;
-        }
-        if (maxIv < speedIv) {
-            index = 3;
-            maxIv = speedIv;
-        }
-        if (maxIv < spAtkIv) {
-            index = 4;
-            maxIv = spAtkIv;
-        }
-        break;
-    }
-    ReadMsgDataIntoString(a0->msgData, sCharactersticMsgs[index][maxIv % 5], a0->notepad.characteristic);
 }
 
 static void FormatFlavorPreference(Unk0208E600 *a0) {

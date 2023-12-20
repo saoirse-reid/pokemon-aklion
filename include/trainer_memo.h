@@ -10,8 +10,6 @@ typedef struct MemoNotepad {
     String *nature;
     int dateLocationMetLine;
     String *dateLocationMet;
-    int characteristicLine;
-    String *characteristic;
     int flavorPreferenceLine;
     String *flavorPreference;
     int eggWatchLine;
